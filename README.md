@@ -69,10 +69,12 @@ EXAMPLE
   pa filter fu_mcf-7.chr22.point hg19.fa > fu_mcf-7.chr22.true
   ```
 * make 3'utr file
+  
   ```
   gunzip -dc Homo_sapiens.Ensembl.GRCh37.65.gtf.gz | pa anno get3utr - > 3utr.bed
   ```
 * test linear trend
+  
   ```
   pa comp linearTrend 3utr.bed fu_mcf-10a.chr22.true fu_mcf-7.chr22.true
   ```
