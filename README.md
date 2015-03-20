@@ -64,7 +64,7 @@ EXAMPLE
   ```
   ## one way of making a bam file out of a fastQ file using bowtie2 with a default option
   ## fill in <bowtie_index> with a proper bowtie2 index file
-  gunzip -dc fastq.gz | fastq_trim.sh -5 4 -t \
+  gunzip -dc fastq.gz | fastq_trim.sh -5 12 -t - \
     	| bowtie2 -x <bowtie_index> -U - \
         | samtools view -bS - | samtools sort - output;
   ```
