@@ -76,6 +76,14 @@ EXAMPLE
   pa filter fu_mcf-10a.chr22.point hg19.fa > fu_mcf-10a.chr22.true
   pa filter fu_mcf-7.chr22.point hg19.fa > fu_mcf-7.chr22.true
   ```
+* cluster peaks
+  
+  ```
+  cat *.true | pa cluster -d20 - > cluster.true
+  bed_count.sh -s cluster.true fu_mcf-10a.chr22.true > fu_mcf-10a.chr22.cluster
+  bed_count.sh -s cluster.true fu_mcf-7.chr22.true > fu_mcf-7.chr22.cluster
+  ```
+  
 * make 3'utr file
   
   ```
@@ -84,6 +92,7 @@ EXAMPLE
 * test linear trend
   
   ```
-  pa comp linearTrend 3utr.bed fu_mcf-10a.chr22.true fu_mcf-7.chr22.true
+  pa comp linearTrend 3utr.bed fu_mcf-10a.chr22.cluster fu_mcf-7.chr22.cluster > fu_mcf-10a_vs_fu_mcf-7.lt
+  
   ```
  
