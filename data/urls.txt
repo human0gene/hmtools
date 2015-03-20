@@ -1,0 +1,2 @@
+http://bentleylab.ucdenver.edu:/DbURL/fu_mcf-10a.bam
+http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-10a.bam
