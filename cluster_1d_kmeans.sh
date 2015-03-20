@@ -1,4 +1,5 @@
 #!/bin/bash
+. util.sh
 MIND=20;
 COL="1,2";
 usage="
@@ -135,9 +136,6 @@ for line in sys.stdin:
 '
 cmd=${cmd/MIND/$MIND};
 cmd=${cmd/COL/$COL};
-makeTemp(){
-	mktemp 2>/dev/null || mktemp -t $0;
-}
 
 
 tmp=`makeTemp`;
