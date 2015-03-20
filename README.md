@@ -58,11 +58,19 @@ EXAMPLE
 
   ```
   pa point -q 10 http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-10a.bam chr22 > fu_mcf-10a.chr22.point
+  pa point -q 10 http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-7.bam chr22 > fu_mcf-7.chr22.point
   ```
 
 * filter out internal-priming artifacts 
 
   ```
+  ## imagine your human genome sequence is in hg19.fa
   pa filter fu_mcf-10a.chr22.point hg19.fa > fu_mcf-10a.chr22.true
+  pa filter fu_mcf-7.chr22.point hg19.fa > fu_mcf-7.chr22.true
+  ```
+  
+* test linear trend
+  ```
+  pa comp linearTrend 3utr.bed fu_mcf-10a.chr22.true fu_mcf-7.chr22.true
   ```
  
