@@ -19,7 +19,27 @@ INSTALL
   
   ```
   pa
+  # this will show the below  
+TOOL  : PolyA Analysis Tools @ BED BASH & BEYOND (v0.1)
+AUTHOR: Hyunmin Kim (Hyeonmin.gim@gmail.com)
+USAGE : 
+	pa data     : list available datasets
+	pa point	: find clevage sites
+	pa filter	: filter out inter-primed artifacts 
+	pa cluster	: cluster proximate points 
+	pa comp     : compare clusters
+	pa report	: report statistics
+	pa anno     : gene annotation tools 
+	pa sum		: merge read counts
+
+	Checking existing tools:
+	samtools 1.1 detected  ## or, not existing 
+	bedtools 2.22.0 detected ## or, not existing
+
   ```
+0. install bedtools and samtools if not installed
+  * samtools: http://www.htslib.org/
+  * bedtools: http://bedtools.readthedocs.org/en/latest/
 
 EXAMPLE
 --------
