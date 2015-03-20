@@ -1,9 +1,9 @@
 #!/bin/bash 
 makeTemp(){
-    mktemp 2>/dev/null || mktemp -t $0;
+    mktemp 2>/dev/null || mktemp -t 0;
 }
 makeTempDir(){
-    mktemp -d 2>/dev/null || mktemp -d -t $0;
+    mktemp -d 2>/dev/null || mktemp -d -t 0;
 }
 
 plot_cluster(){
