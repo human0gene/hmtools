@@ -59,6 +59,17 @@ EXAMPLE
   ```
   pa point -q 10 http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-10a.bam chr22 > fu_mcf-10a.chr22.point
   pa point -q 10 http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-7.bam chr22 > fu_mcf-7.chr22.point
+  
+  ## one way of making a bam file out of a fastQ file
+  ## $NPROC: number of processors
+  ## $BWOTIE_IDX : bowtie 2 indice
+  ## $FQ : FastQ input
+  ## $OUT: output
+    bowtie2 -p $NPROC -x $BOWTIE_IDX -U $FQ \
+        | samtools view -bS - | samtools sort - $OUT;
+    samtools index $OUT.bam
+}
+
   ```
 
 * filter out internal-priming artifacts 
