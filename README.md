@@ -41,6 +41,10 @@ USAGE :
   * samtools: http://www.htslib.org/
   * bedtools: http://bedtools.readthedocs.org/en/latest/
 
+0. download fasta file(s) and unzip it
+  * hg19 : http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz
+
+
 EXAMPLE
 --------
 
