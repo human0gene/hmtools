@@ -43,7 +43,7 @@ USAGE :
 
 0. download fasta file(s) and unzip it
   * hg19 : http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz
-
+  * bowtie2 hg19 indice : ftp://ftp.ccb.jhu.edu/pub/data/bowtie2_indexes/hg19.zip
 
 EXAMPLE
 --------
