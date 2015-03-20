@@ -33,7 +33,7 @@ EXAMPLE
 * make point out of bam
 
   ```
-  pa point -q 10 http://bentleylab.ucdenver.edu:/DbURL/fu_mcf-10a.bam chr22 > fu_mcf-10a.chr22.point
+  pa point -q 10 http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-10a.bam chr22 > fu_mcf-10a.chr22.point
   ```
 
  
