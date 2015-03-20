@@ -1,4 +1,5 @@
 #!/bin/bash 
+. util.sh
 THIS=${BASH_SOURCE##*/}
 echo "#$THIS $@" >&2
 usage="
