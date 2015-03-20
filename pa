@@ -49,7 +49,7 @@ USAGE :
 echo "	Checking existing tools:" >&2;
 if [ $samtools_version ];then
 	echo "	samtools $samtools_version detected" >&2;
-	echo "  please update if $samtools_version < 1.1" >&2; 
+	echo "	please update this if $samtools_version < 1.1" >&2; 
 	bedtools 2.22.0 detected
 
 else
@@ -57,7 +57,7 @@ else
 fi
 if [ $bedtools_version ];then
 	echo "	bedtools $bedtools_version detected" >&2;
-	echo "  please update $bedtools_version < 2.22.0" >&2;
+	echo "	please update this if $bedtools_version < 2.22.0" >&2;
 else
 	echo "	please install bedtools" >&2; exit 1;
 fi
