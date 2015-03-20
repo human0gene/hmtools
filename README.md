@@ -30,10 +30,15 @@ EXAMPLE
   pa data
   ```
 
-* make point out of bam
+* make a polyA point file out of a bam file
 
   ```
   pa point -q 10 http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-10a.bam chr22 > fu_mcf-10a.chr22.point
   ```
 
+* filter out internal-priming artifacts 
+
+  ```
+  pa filter fu_mcf-10a.chr22.point hg19.fa > fu_mcf-10a.chr22.true
+  ```
  
