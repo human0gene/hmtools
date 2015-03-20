@@ -63,8 +63,6 @@ EXAMPLE
   ## one way of making a bam file out of a fastQ file using bowtie2 with a default option
     bowtie2 -x /your/bowtie2/index/directory -U fastq_file \
         | samtools view -bS - | samtools sort - output;
-}
-
   ```
 
 * filter out internal-priming artifacts 
