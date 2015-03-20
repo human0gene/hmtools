@@ -1,4 +1,5 @@
 #!/bin/bash
+. util.sh
 MIND=20; #minimum distance between peaks 
 D=${BASH_SOURCE/%*}
 B=${BASH_SOURCE##*/}
@@ -22,7 +23,7 @@ fi
 
 
 echo "#$B $@" >&2
-	tmpd=`mktemp -d`;
+	tmpd=`makeTempDir`;
 	#tmpd='tmpd'; #mkdir -p $tmpd
 	sort -k1,1 -k2,3n $1 \
 	| mergeBed -i stdin -s -c 6,2,5 -o distinct,collapse,collapse -d $MIND > $tmpd/a.bed
