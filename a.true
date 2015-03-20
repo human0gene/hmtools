@@ -1,0 +1,4 @@
+
+FUNCTION: pass real pAs ( Prob(site|real) > .5)
+USAGE: pa_filter.sh <bed> <fasta>
+
