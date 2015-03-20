@@ -59,9 +59,13 @@ EXAMPLE
   ```
   pa point -q 10 http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-10a.bam chr22 > fu_mcf-10a.chr22.point
   pa point -q 10 http://bentleylab.ucdenver.edu:/LabUrl/fu_mcf-7.bam chr22 > fu_mcf-7.chr22.point
-  
+  ```
+* mapping and triming
+  ```
   ## one way of making a bam file out of a fastQ file using bowtie2 with a default option
-    bowtie2 -x /your/bowtie2/index/directory -U fastq_file \
+  ## fill in <bowtie_index> with a proper bowtie2 index file
+  gunzip -dc fastq.gz | fastq_trim.sh -5 4 -t \
+    	| bowtie2 -x <bowtie_index> -U - \
         | samtools view -bS - | samtools sort - output;
   ```
 
