@@ -12,7 +12,7 @@ INSTALL
 0. include /my/hmtools to $PATH
   
   ```
-  echo 'PATH='`pwd`/hmtools':$PATH''; export $PATH' >> ~/.bash_profile 
+  echo 'PATH='`pwd`/hmtools':$PATH''; export PATH' >> ~/.bash_profile 
   source ~/.bash_profile 
   ```
 0. type pa
