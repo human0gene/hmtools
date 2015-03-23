@@ -17,7 +17,7 @@ while getopts "hd:" arg; do
 	esac
 done
 shift $(( OPTIND - 1));
-if [ $# -ne 1 ]; then
+if [ $# -lt 1 ]; then
 	echo "$usage";exit 1;
 fi
 
@@ -25,7 +25,8 @@ fi
 echo "#$B $@" >&2
 	tmpd=`makeTempDir`;
 	#tmpd='tmpd'; #mkdir -p $tmpd
-	sort -k1,1 -k2,3n $1 \
+	#sort -k1,1 -k2,3n $1 \
+	bed_sum.sh "$@" \
 	| mergeBed -i stdin -s -c 6,2,5 -o distinct,collapse,collapse -d $MIND > $tmpd/a.bed
 
 	cat $tmpd/a.bed | awk -v OFS="\t" -v M=$MIND '
