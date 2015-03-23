@@ -80,10 +80,10 @@ EXAMPLE
   
   ```
   # make peak clusters with pooled data
-  cat *.true | pa cluster -d20 - > cluster.true
+  pa cluster -d20 *.true > trues.cluster
   # for each cluster count reads of individual samples 
-  bed_count.sh -s cluster.true fu_mcf-10a.chr22.true > fu_mcf-10a.chr22.cluster
-  bed_count.sh -s cluster.true fu_mcf-7.chr22.true > fu_mcf-7.chr22.cluster
+  bed_count.sh -s trues.cluster fu_mcf-10a.chr22.true > fu_mcf-10a.chr22.cluster
+  bed_count.sh -s trues.cluster fu_mcf-7.chr22.true > fu_mcf-7.chr22.cluster
   ```
   
 * make 3'utr file
