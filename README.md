@@ -82,8 +82,8 @@ EXAMPLE
   # make peak clusters with pooled data
   pa cluster -d20 *.true > trues.cluster
   # for each cluster count reads of individual samples 
-  bed_count.sh -s trues.cluster fu_mcf-10a.chr22.true > fu_mcf-10a.chr22.cluster
-  bed_count.sh -s trues.cluster fu_mcf-7.chr22.true > fu_mcf-7.chr22.cluster
+  bed_count.sh -s trues.cluster fu_mcf-10a.chr22.true | awk -v OFS="\t" '{print $1,$2,$3,$4,$7,$6;}' > fu_mcf-10a.chr22.cluster
+  bed_count.sh -s trues.cluster fu_mcf-7.chr22.true | awk -v OFS="\t" '{print $1,$2,$3,$4,$7,$6;}' > fu_mcf-7.chr22.cluster
   ```
   
 * make 3'utr file
