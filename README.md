@@ -89,7 +89,8 @@ EXAMPLE
 * make 3'utr file
   
   ```
-  gunzip -dc Homo_sapiens.Ensembl.GRCh37.65.gtf.gz | pa anno get3utr - > 3utr.bed
+  gunzip -dc ensGene.txt.gz | ucsc_to_bed12.sh - | pa anno get3utr - > 3utr.bed
+
   ```
 * test linear trend
   
