@@ -42,7 +42,12 @@ for f in ${F[@]:1};do
 done
 cat $fa | perl -ne 'chomp; my @a=split/\t/,$_;
 	my @b=split /\|/,$a[3]; $a[3]=shift @b;
-	print join( "\t",@a);
-	foreach my $bi (@b){ print "\t",$bi; }
-	print "\n";
+	my $ok=0;	
+	foreach my $bi (@b){ if($bi != 0){ $ok=1; break}} 
+
+	if ($ok==1){
+		print join( "\t",@a);
+		foreach my $bi (@b){ print "\t",$bi; }
+		print "\n";
+	}
 '
