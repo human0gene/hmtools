@@ -53,19 +53,25 @@ cor(){
 	echo -e "\tcor:$cor_all,cor.inter:$cor_inter";
 }
 comp(){
-	echo -e "file\tup\tdown"
-	for f in "$@";do
-		up=`awk '$(NF)<=0.05 && $(NF-2) < 0' $f | wc -l`
-		dn=`awk '$(NF)<=0.05 && $(NF-2) > 0' $f | wc -l`
-		echo -e "$f\t$up\t$dn";
-	done 
+	echo -e "file\tnegative\tpositive"
+	for f in "${@:3}";do
+		if [ $1 == "pvalue" ];then
+			neg=`awk -v V=$2 '$(NF-1) <= V && $(NF-2) < 0' $f | wc -l`
+			pos=`awk -v V=$2 '$(NF) <= V && $(NF-2) > 0' $f | wc -l`
+			echo -e "$f\t$neg\t$pos";
+		elif [ $1 == "fdr" ]; then
+			neg=`awk -v V=$2 '$(NF) <= V && $(NF-2) < 0' $f | wc -l`
+			pos=`awk -v V=$2 '$(NF) <= V && $(NF-2) > 0' $f | wc -l`
+			echo -e "$f\t$neg\t$pos";
+		fi
+	done
 }
 usage="
 USAGE : 
 	report cor <bed> <bed>	: calc spearman correlation 
 	report point <bed> 		: report points
 	report bam <bam>        : calc mapping rate and multi-hits ...
-	report comp <file>      : output of linear trend or fisher's exact tests  
+	report comp <pvalue|fdr> <threshold> <file>      : output of linear trend or fisher's exact tests  
 " 
 if [ $# -lt 2 ]; then
 	echo "$usage" >&2; exit 1
