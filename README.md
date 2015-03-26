@@ -1,8 +1,11 @@
 # hmtools
 Hyunmin's Tools for Studying Bioinformatics 
 Policy BED BASH and BEYOND.
+
 BED : use BED-like formats
+
 BASH : excutable on BASH environment
+
 BEYOND : never hide source contents, no capusulization, transparency, reduced cross-referencing ..
   say, simple, easy to understand, reusable (no library, but code copy & paste)
 
