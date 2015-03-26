@@ -9,7 +9,7 @@ I followed the policy of BED BASH and BEYOND (B3).
   * decapsulation: believe users are as smart as developers
   * reusability : copy & paste of a part of source should be executable, limited usage of libraries
   * independency : preprocessing and analysis are independent of each other
-  * ... I don't like structured, complex, big and obesity source codes.
+  * healthy coding : avoid complex structure, big and overweight source code.
 
 
 INSTALL
