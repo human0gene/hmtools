@@ -1,14 +1,16 @@
 # hmtools
 Hyunmin's Tools for Studying Bioinformatics 
 
-Policy of BED BASH and BEYOND.
+I followed the policy of BED BASH and BEYOND (B3).
 
-* BED : use BED-like formats
+* BED    : use BED-like formats for the communication between the programs
+* BASH   : executable in BASH environment
+* BEYOND 
+  * decapsulation: believe users are as smart as developers
+  * reusability : copy & paste of a part of source should be executable, limited usage of libraries
+  * independency : preprocessing and analysis are independent of each other
+  * ... I don't like structured, complex, big and obesity source codes.
 
-* BASH : excutable on BASH environment
-
-* BEYOND : never hide source contents, no capusulization, transparency, reduced cross-referencing ..
-  say, simple, easy to understand, reusable (no library, but code copy & paste)
 
 INSTALL
 --------
