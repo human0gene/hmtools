@@ -1,16 +1,14 @@
 # hmtools
-Hyunmin's Tools for Studying Bioinformatics 
-
-I followed the policy of BED BASH and BEYOND (B3).
+Hyunmin's Tools for Studying Bioinformatics written in B3 (BED BASH & BEYOND) style.
+This is a collection of tools for PolyA-Seq analysis
 
 * BED    : use BED-like formats for the communication between the programs
 * BASH   : executable in BASH environment
 * BEYOND 
-  * decapsulation: believe users are as smart as developers
-  * reusability : copy & paste of a part of source should be executable, limited usage of libraries
-  * independency : preprocessing and analysis are independent of each other
-  * healthy coding : avoid complex structure, big and overweight source code.
-
+  * Separate analysis from preprocessing (this cuts down a volume of codes) 
+  * Decapsulation, help users to copy and paste source codes to debug 
+  * Library free, call standalone programs. Don't bother people to install libraries.
+ 
 
 INSTALL
 --------
